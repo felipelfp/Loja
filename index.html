@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Dr. Wondertainment</title>
+    <!-- Importando uma fonte moderna do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <h1 class="logo">Dr. Wondertainment</h1>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" onclick="toggleCart(event)">Carrinho (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Nossos Doces de Vitrine</h2>
+            <div id="product-list" class="product-grid">
+                <!-- Produtos serão injetados aqui pelo JavaScript -->
+            </div>
+        </section>
+
+        <section id="sob-encomenda">
+            <h2>Sob Encomenda</h2>
+            <div class="encomenda-info">
+                <h3>Bolo Sob Encomenda</h3>
+                <p>Bolos personalizados para festas e eventos. Escolha seu sabor e decoração.</p>
+                <p class="price">R$ 79,90 / kg</p>
+                <button class="btn-primary">Solicitar Orçamento</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart(event)">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <ul id="cart-items">
+                <!-- Itens do carrinho serão injetados aqui -->
+            </ul>
+            <p class="cart-total-display">Total: R$ <span id="cart-total">0.00</span></p>
+            <button class="btn-primary">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dr. Wondertainment. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
